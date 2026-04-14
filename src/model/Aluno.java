@@ -1,12 +1,14 @@
 package model;
 
+/*** As classe do model representam a estrutura de dados (entidades/tabelas) e a lógica de negócios da aplicação.  */
 public class Aluno {
-        
+    //**** Atributos do objeto Aluno */    
     private String nome;
     private int idade;
     private String cpf;
     private Curso curso;
     
+    /*** Construtor vazio e com parametros, auxiliam na criação dos objetos */
     public Aluno() {
     }
 
@@ -16,6 +18,7 @@ public class Aluno {
         this.cpf = cpf;
     }
 
+    //**** Metodos getters e Setters dos atributos (Encapsulamento) */
     public String getNome() {
         return nome;
     }
@@ -40,12 +43,6 @@ public class Aluno {
         this.cpf = cpf;
     }
 
-    @Override
-    public String toString() {
-        return "Aluno [nome=" + nome + "| idade=" + idade 
-            + "| cpf=" + cpf + "| curso=" + curso.getNome() + "]";
-    }
-
     public Curso getCurso() {
         return curso;
     }
@@ -54,5 +51,10 @@ public class Aluno {
         this.curso = curso;
     }
     
-    
+    /**** permite visualiza as informações do objeto  */
+    @Override
+    public String toString() {
+        return "Aluno [nome=" + nome + "| idade=" + idade 
+            + "| cpf=" + cpf + "| curso=" + curso.getNome() + "]";
+    }
 }

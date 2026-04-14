@@ -1,9 +1,13 @@
 package model;
 
+/*** As classe do model representam a estrutura de dados (entidades/tabelas) e a lógica de negócios da aplicação.  */
 public class Curso {
+    //**** Atributos do objeto Aluno */  
     private int id;
     private String nome;
     private int duracao;
+
+    /*** Construtor vazio e com parametros, auxiliam na criação dos objetos */
     public Curso() {
     }
     public Curso(int id, String nome, int duracao) {
@@ -12,6 +16,7 @@ public class Curso {
         this.duracao = duracao;
     }
 
+    //**** Metodos getters e Setters dos atributos (Encapsulamento) */
     public int getId() {
         return id;
     }
@@ -30,6 +35,8 @@ public class Curso {
     public void setDuracao(int duracao) {
         this.duracao = duracao;
     }
+
+    /**** permite visualiza as informações do objeto  */
     @Override
     public String toString() {
         return "Curso [id=" + id + ", nome=" + nome + ", duracao=" + duracao + "]";
