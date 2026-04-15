@@ -4,7 +4,10 @@ import java.util.*;
 
 import model.Curso;
 
-/**** As classes da camada repository em projetos Java, servem para abstrair o acesso aos dados. Elas isolam a regra de negócio da tecnologia de persistência */
+/**** As classes da camada repository em projetos Java, 
+ * servem para abstrair o acesso aos dados. 
+ * Elas isolam a regra de negócio da tecnologia de 
+ * persistência */
 public class CursoRepository {
     /** A lista de cursos irá simular nossa tabela do banco de dados */
     private List<Curso> cursos = new ArrayList<>();

@@ -2,7 +2,7 @@ package model;
 
 /*** As classe do model representam a estrutura de dados (entidades/tabelas) e a lógica de negócios da aplicação.  */
 public class Aluno {
-    //**** Atributos do objeto Aluno */   
+    //**** Atributos do objeto Aluno */    
     private int id;
     private String nome;
     private int idade;
@@ -13,22 +13,29 @@ public class Aluno {
     public Aluno() {
     }
 
-    public Aluno(int id, String nome, int idade, String cpf) {
+    public Aluno(String nome, int idade, String cpf, Curso curso){
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+        this.curso = curso;
+    }
+
+    public Aluno(int id, String nome, int idade, String cpf, Curso curso){
         this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;
+        this.curso = curso;
     }
 
     //**** Metodos getters e Setters dos atributos (Encapsulamento) */
     public int getId() {
-        return nome;
+        return id;
     }
 
     public void setId(int id) {
         this.id = id;
     }
-    
     public String getNome() {
         return nome;
     }
@@ -64,7 +71,7 @@ public class Aluno {
     /**** permite visualiza as informações do objeto  */
     @Override
     public String toString() {
-        return "Aluno [id=" + id +" nome=" + nome + "| idade=" + idade 
+        return "Aluno [nome=" + nome + "| idade=" + idade 
             + "| cpf=" + cpf + "| curso=" + curso.getNome() + "]";
     }
 }

@@ -1,15 +1,13 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import model.*;
-import repository.CursoRepository;
+import service.AlunoService;
 import service.CursoService;
 
 public class App {
     CursoService cursoService = new CursoService();
+    AlunoService alunoService = new AlunoService();
     Scanner scanner = new Scanner(System.in)    ;
-
+    
     public static void main(String[] args) throws Exception {
         /*System.out.println("Hello, World!");
 
@@ -88,13 +86,13 @@ public class App {
                             subMenu = scanner.nextInt();
                             scanner.nextLine(); 
                             switch (subMenu) {
-                                case 1:System.out.println("Aluno adicionar"); break;
-                                case 2: System.out.println("alunoService.listar()"); break;
-                                case 3: System.out.println("cursoService.atualizar()"); break;
-                                case 4: System.out.println("cursoService.excluir();"); break;
-                                case 5: System.out.println("cursoService.buscarPorNome();"); break;
+                                case 1: alunoService.adicionar(); break;
+                                case 2: alunoService.listar(); break;
+                                case 3: alunoService.atualizar(); break;
+                                case 4: alunoService.remover(); break;
+                                case 5: alunoService.buscar(); break;
                                 case 0: System.out.println("Voltar"); break;
-                                default: System.out.println("Opção Invalida");
+                                default: System.out.println("Opção inválida!"); break;
                             }
                         }while (subMenu !=0);
                     break;

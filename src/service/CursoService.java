@@ -7,8 +7,10 @@ import java.util.Scanner;
 import model.Curso;
 import repository.CursoRepository;
 
-/**** As classes da camada de service servem para encapsular a lógica de negócios, 
- * separando-a dos controladores (Controller) e do acesso a dados (Repository). */
+/**** As classes da camada de service servem para encapsular 
+ * a lógica de negócios, 
+ * separando-a dos controladores (Controller) 
+ * e do acesso a dados (Repository). */
 public class CursoService {
     /*** trabala a lista de cursos que vem do repositório */
     private static List<Curso> listaCursos;
