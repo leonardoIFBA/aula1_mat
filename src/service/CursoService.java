@@ -136,6 +136,7 @@ public class CursoService {
         System.out.println("Digite o nome do curso: ");
         String nome = scanner.nextLine().toLowerCase();
 
+        /** cria uma lista para guardar os cursos encontrados na busca */
         List<Curso> resultados = new ArrayList<>();
         for(Curso c : listaCursos){
             if (c.getNome().toLowerCase().contains(nome)){
