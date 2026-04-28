@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 import service.AlunoService;
 import service.CursoService;
+import service.ProfessorService;
 
 public class App {
     CursoService cursoService = new CursoService();
     AlunoService alunoService = new AlunoService();
+    ProfessorService professorService = new ProfessorService();
     Scanner scanner = new Scanner(System.in)    ;
     
     public static void main(String[] args) throws Exception {
@@ -68,6 +70,7 @@ public class App {
             System.out.println("\n=== Bem vindo ao Sistema IFBA Aula 2 ===");
             System.out.println("1 - Gerenciar Curso");
             System.out.println("2 - Gerenciar Aluno");
+            System.out.println("3 - Gerenciar Professor");
             System.out.println("0 - Fechar o programa");
             System.out.println("Escolha a opção: ");
             menuPrincipal = scanner.nextInt();
@@ -110,9 +113,9 @@ public class App {
                 case 3: 
                     do{
                         mostrarMenuProfessor();
-                        submenu = scanner.nextInt();
+                        subMenu = scanner.nextInt();
                         scanner.nextLine(); // Limpar buffer                        
-                        switch(submenu) {
+                        switch(subMenu) {
                             case 1: professorService.adicionar(); break;
                             case 2: professorService.listar(); break;
                             case 3: professorService.atualizar(); break;
@@ -121,7 +124,7 @@ public class App {
                             case 0: System.out.println("Voltar"); break;
                             default: System.out.println("Opção inválida!"); break;
                         }                    
-                    }while (submenu != 0);
+                    }while (subMenu != 0);
                 break;
             
                 default:

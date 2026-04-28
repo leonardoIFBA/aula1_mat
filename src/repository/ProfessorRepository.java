@@ -10,7 +10,7 @@ public class ProfessorRepository {
     private static int contadorId = 1;
 
     public ProfessorRepository(){
-        professores.add(new Professor(0, "leonardo", "leo@ifba.edu.br", "123456"));
+        professores.add(new Professor(contadorId++, "leonardo", "leo@ifba.edu.br", "123456"));
     }
 
     public void salvar(Professor professor){

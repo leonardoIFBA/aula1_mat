@@ -13,7 +13,7 @@ public class Aluno {
     public Aluno() {
     }
 
-    public Aluno(String nome, int idade, String cpf, Curso curso){
+    public Aluno(int id, String nome, int idade, String cpf, Curso curso){
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;

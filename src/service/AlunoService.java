@@ -79,7 +79,7 @@ public class AlunoService {
         }
 
         /*** cria um objeto aluno e carrega as informações dos atributos, que foram passados pelo usuário */
-        Aluno novoAluno = new Aluno(nome, idade, cpf, cursoSelecionado);
+        Aluno novoAluno = new Aluno(0, nome, idade, cpf, cursoSelecionado);
         repoAluno.salvar(novoAluno);
       
         System.out.println("Aluno adicionado com sucesso! ID: " + novoAluno.getId());
