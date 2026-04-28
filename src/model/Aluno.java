@@ -20,15 +20,7 @@ public class Aluno {
         this.curso = curso;
     }
 
-    public Aluno(int id, String nome, int idade, String cpf, Curso curso){
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-        this.cpf = cpf;
-        this.curso = curso;
-    }
-
-    //**** Metodos getters e Setters dos atributos (Encapsulamento) */
+    /**** Metodos getters e Setters dos atributos (Encapsulamento) */
     public int getId() {
         return id;
     }
