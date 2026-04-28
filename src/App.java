@@ -51,6 +51,17 @@ public class App {
         System.out.println("Escolha uma opção: ");
     }
 
+    private void mostrarMenuProfessor() {
+        System.out.println("\n=== SISTEMA CRUD : PROFESSOR ===");
+        System.out.println("1 - Adicionar novo professor");
+        System.out.println("2 - Listar todos professores");
+        System.out.println("3 - Atualizar professor");
+        System.out.println("4 - Remover professor");
+        System.out.println("5 - Buscar professor");
+        System.out.println("0 - Voltar");
+        System.out.print("Escolha: ");
+    }
+
     public void execute(){
         int menuPrincipal, subMenu;
         do{
@@ -96,6 +107,22 @@ public class App {
                             }
                         }while (subMenu !=0);
                     break;
+                case 3: 
+                    do{
+                        mostrarMenuProfessor();
+                        submenu = scanner.nextInt();
+                        scanner.nextLine(); // Limpar buffer                        
+                        switch(submenu) {
+                            case 1: professorService.adicionar(); break;
+                            case 2: professorService.listar(); break;
+                            case 3: professorService.atualizar(); break;
+                            case 4: professorService.remover(); break;
+                            case 5: professorService.buscar(); break;
+                            case 0: System.out.println("Voltar"); break;
+                            default: System.out.println("Opção inválida!"); break;
+                        }                    
+                    }while (submenu != 0);
+                break;
             
                 default:
                     break;
