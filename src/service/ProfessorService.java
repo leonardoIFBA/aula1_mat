@@ -99,6 +99,8 @@ public class ProfessorService {
             professorSelecionado.setSiape(siape);
         }
 
+        scanner.nextLine();
+        
         System.out.println("Professor atualizado com sucesso!");
     }
 
@@ -123,6 +125,14 @@ public class ProfessorService {
                 System.out.println(c);
             }
             System.out.println("Encontrados: " + resultados.size() + " professores");
+        }
+    }
+
+    public void valorBonus(){
+        listaProfessores = repoProfessor.listarTodos();
+        System.out.print("\n====== Bônus para Professor ======");
+        for(Professor p : listaProfessores){
+            System.out.println("Nome: " + p.getNome() + ", bonus: " + p.calcularBonus());
         }
     }
 

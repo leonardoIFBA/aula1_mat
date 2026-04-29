@@ -1,22 +1,24 @@
 package repository;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import model.Aluno;
 import model.Curso;
 
-public class AlunoRepository {
+/**** As classes da camada repository em projetos Java, servem para abstrair o acesso aos dados. 
+ * Elas isolam a regra de negócio da tecnologia de persistência */
+public class AlunoRepository{
+    /** A lista de alunos irá simular nossa tabela do banco de dados */
     private List<Aluno> alunos = new ArrayList<>();
+    /**** simula o identificador do objeto cadastrado */
     private static int contadorId = 1;
 
+    /*** o construtor da classe cria 3 objetos aluno e adiciona na lista de alunos, simula uma tabela de BD com informações */
     public AlunoRepository(){
-        // Um aluno precisa de um curso, criamos um curso para vincular com o aluno
+        // Adicionar alguns cursos para teste
         Curso c = new Curso(0, "Teste", 1000);
-        // Adicionar alguns alunos para teste
-        alunos.add(new Aluno(contadorId++, "João", 20, "111.222.333.10", c));
-        alunos.add(new Aluno(contadorId++, "Maria", 19, "222.333.444.01", c));
-        alunos.add(new Aluno(contadorId++, "Bruxa",120, "333.444.555.12", c));
+        alunos.add(new Aluno(contadorId++, "João", "joao@mail", 20, "111.222.333.10", c));
+        alunos.add(new Aluno(contadorId++, "Maria", "maria@mail", 19, "222.333.444.01", c));
+        alunos.add(new Aluno(contadorId++, "Bruxa", "bruxa@mail",120, "333.444.555.12", c));
     }
 
     /**** salva um objeto aluno na lista de alunos */
@@ -35,7 +37,7 @@ public class AlunoRepository {
         return alunos;
     }
 
-    /**** retorna o id */
+    /**** retorna o valor do id */
     public static int getContadorId() {
         return contadorId;
     }

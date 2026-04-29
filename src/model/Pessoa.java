@@ -1,5 +1,6 @@
 package model;
 
+/**** Classe pai que  */
 public abstract class Pessoa {
     private int id;
     private String nome;

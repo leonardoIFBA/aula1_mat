@@ -1,8 +1,12 @@
 package model;
 
+/*** As classe do model representam a estrutura de dados (entidades/tabelas) e a lógica de negócios da aplicação.  
+   * Ela herda as caracteristicas da classe Pessoa */
 public class Professor extends Pessoa {
+    /**** Atributos do objeto Professor */ 
     private String siape;
 
+    /*** Construtor vazio e com parametros, auxiliam na criação dos objetos professores */
     public Professor(){}
 
     public Professor(int id, String nome, String email, String siape){
@@ -11,14 +15,7 @@ public class Professor extends Pessoa {
 
     }
 
-    
-
-    @Override
-    public double calcularBonus() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularBonus'");
-    }
-
+    /**** Metodos getters e Setters dos atributos (Encapsulamento) */
     public String getSiape() {
         return siape;
     }
@@ -27,6 +24,13 @@ public class Professor extends Pessoa {
         this.siape = siape;
     }
 
+    /**** Implementação concreta do métodoo herdado da classe Pessoa  */
+    @Override
+    public double calcularBonus() {
+        return 2000 * 1.10;
+    }
+
+    /**** permite visualiza as informações do objeto Professor*/
     @Override
     public String toString() {
         return "Professor " + super.toString() + ", siape=" + siape;
